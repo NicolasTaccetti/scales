@@ -37,5 +37,17 @@ void scale(int x, int y) {
   double side1B=(y+18);
   double side2A=(x+20);
   double side2B=(y+20);
-  float r=
-  stroke(0, r, 0);
+  float g=0;
+  while (g<=255) {
+    g+=10;}
+   float r=0;
+   while (r<=255) {
+     r+=1.4;}
+    float b=0;
+    while (r<
+    
+  stroke(r, g, b);
+  
+ 
+   
+   
