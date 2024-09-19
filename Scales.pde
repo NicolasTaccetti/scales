@@ -64,13 +64,13 @@ float bottomA=x//(x+18);
   float topA=(x);
   float topB=(y);
  //color gradient
-   float g=0;
+   float g=4;
 //   while (g<=255) {
 //     g+=10;}
-   float r=255;
+   float r=204;
 //   while (r<=255) {
 //      r+=1.4;}
-     float b=0;
+     float b=4;
 //     while (b<=255) {
 //         b+=5; }
 //loop decrements shape size in the gradient
@@ -79,7 +79,8 @@ float bottomA=x//(x+18);
       bottomA+=1.2;
       bottomB+=1.67;  
       centerA++;
-      g-=17
+      r+=16.73
+        b+=16.73
       strokeWeight(2);
     stroke(r, g, b);
     noFill();
