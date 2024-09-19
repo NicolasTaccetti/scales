@@ -11,12 +11,12 @@ void setup() {
 }
 void draw() {
   //scale looper
-  for(int y=0; y<500; y+=30) {
-  for(int x=600-(y/2); x>-50; x-=15) {
+  for(int y=-50; y<550; y+=30) {
+  for(int 900-(y/2); x>-50; x-=15) {
   scale(x,y);
   }
   }
-  //hairs
+  //hairs, randomized, overlay scales
   for(int times=0; times<100; times++) {
   
 //   int X=(int)((Math.random() * maxX) + minX), another method of generating a random number
@@ -38,11 +38,7 @@ void draw() {
   curveVertex(X+24,Y+24);
   endShape();
    }
-  for(int y=0; y<500; y+=30) {
-  for(int x=600-(y/2); x>-50; x-=15) {
-  scale(x,y);
-  }
-  }
+   
 //   for(int y=15; y<500; y+=30) {
 //   for(int x=520; x>-50; x-=15) {
 //      scale(x,y);}}
@@ -53,46 +49,53 @@ void draw() {
 }
 void scale(int x, int y) {
     
+//  This code was my original lizard scale before doing a gradient
 //   fill(6, 70, 35);
 //   quad(x, y, x+15, y+11, x+18, y+25, x, y+18);
 //   fill(32, 61, 30);
 //   quad(x, y, x+20, y+10, x+18, y+25, x+15, y+11);
-  float centerA=(x+15);
-float centerB=(y+11);
-float bottomA=(x+18);
-  float bottomB=(y+25);
+  //outermost quadrilateral coordinates
+  float centerA=x//(x+15);
+float centerB=y//(y+11);
+float bottomA=x//(x+18);
+  float bottomB=y(//(y+25);
   float side1A=(x);
   float side1B=(y+18);
   float topA=(x);
   float topB=(y);
-  float g=0;
-  while (g<=255) {
-    g+=10;}
-   float r=0;
-   while (r<=255) {
-     r+=1.4;}
-    float b=0;
-    while (b<=255) {
-        b+=5; }
-
-    while ((centerA>x) && (centerB>y) && (bottomA>x) && (bottomB>y)); {
-      centerB--;
-      bottomA--;
-      bottomB--;  
-      centerA--;
+ //color gradient
+   float g=0;
+//   while (g<=255) {
+//     g+=10;}
+   float r=255;
+//   while (r<=255) {
+//      r+=1.4;}
+     float b=0;
+//     while (b<=255) {
+//         b+=5; }
+//loop decrements shape size in the gradient
+    while ((centerA<x+15) && (centerB<y+11) && (bottomA<x+18) && (bottomB<y+25)); {
+      centerB++0.73;
+      bottomA+=1.2;
+      bottomB+=1.67;  
+      centerA++;
+      g-=17
       strokeWeight(2);
     stroke(r, g, b);
     noFill();
     quad(centerA, centerB, bottomA, bottomB, side1A, side1B, topA, topB);
-    
+    println(b);
        
     }
-    
+    //other side of the scale
      fill(32, 61, 30);
-        quad(x, y, x+20, y+10, x+18, y+25, x+15, y+11);
+        quad(x, y, x+20, y+10, x+18, y+25, x+15, y+11)
     
     
    
 }
     
     
+    
+    
+ }
